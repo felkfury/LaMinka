@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaMinka", "LaMinka\LaMinka.csproj", "{CE7BD9F9-62FB-4807-A247-1BDD2B03DB3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaMinka.Logica", "LaMinka.Logica\LaMinka.Logica.csproj", "{B136EF6F-50B5-4A4E-91B5-2EDE900DFD4E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{F29E5541-4267-443E-B5DA-8B79D61C84DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{33DA38C8-8CD5-417A-BD9A-1E3E9041A9CE}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Scripts\dbScriptsConfig.json = Resources\Scripts\dbScriptsConfig.json
+		Resources\Scripts\Execute.bat = Resources\Scripts\Execute.bat
+		Resources\Scripts\ExecuteAll.bat = Resources\Scripts\ExecuteAll.bat
+		Resources\Scripts\ExecuteTests.bat = Resources\Scripts\ExecuteTests.bat
+		Resources\Scripts\UpdateDb.bat = Resources\Scripts\UpdateDb.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0.0", "1.0.0", "{BDB247AB-EC60-41D7-B262-22C23E29098C}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Scripts\1.0.0\LaMinka 1.0.0.1 - Create Database.sql = Resources\Scripts\1.0.0\LaMinka 1.0.0.1 - Create Database.sql
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaMinka.Web.Cliente", "LaMinkaClient\LaMinka.Web.Cliente.csproj", "{A5E77024-4B48-4E4C-9288-93BBDFBEB992}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE7BD9F9-62FB-4807-A247-1BDD2B03DB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7BD9F9-62FB-4807-A247-1BDD2B03DB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7BD9F9-62FB-4807-A247-1BDD2B03DB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7BD9F9-62FB-4807-A247-1BDD2B03DB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B136EF6F-50B5-4A4E-91B5-2EDE900DFD4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B136EF6F-50B5-4A4E-91B5-2EDE900DFD4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B136EF6F-50B5-4A4E-91B5-2EDE900DFD4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B136EF6F-50B5-4A4E-91B5-2EDE900DFD4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E77024-4B48-4E4C-9288-93BBDFBEB992}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E77024-4B48-4E4C-9288-93BBDFBEB992}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E77024-4B48-4E4C-9288-93BBDFBEB992}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E77024-4B48-4E4C-9288-93BBDFBEB992}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{33DA38C8-8CD5-417A-BD9A-1E3E9041A9CE} = {F29E5541-4267-443E-B5DA-8B79D61C84DD}
+		{BDB247AB-EC60-41D7-B262-22C23E29098C} = {33DA38C8-8CD5-417A-BD9A-1E3E9041A9CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB09AD32-6C48-4466-9899-BF72CFC90C61}
+	EndGlobalSection
+EndGlobal
