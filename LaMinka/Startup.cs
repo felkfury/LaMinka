@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LaMinka.Logica.Data;
+using LaMinka.Logica.Servicio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
-using LaMinka.Logica.Data;
-using LaMinka.Logica.Servicio;
 
 namespace LaMinka
 {
@@ -32,11 +27,12 @@ namespace LaMinka
 
             services.AddScoped<ServicioUsuario>();
 
+            services.AddScoped<ServicioProducto>();
+
             services.AddDbContext<LaMinkaContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("LaMinkaContext")));
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

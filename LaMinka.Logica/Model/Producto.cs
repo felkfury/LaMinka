@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace LaMinka.Logica.Model
 {
@@ -12,9 +14,16 @@ namespace LaMinka.Logica.Model
         }
 
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string Nombre { get; set; }
+
+        [Required(ErrorMessage = "Este campo es obligatorio")]
         public string Descripcion { get; set; }
+
+        [DisplayName("Foto")]
         public string FotoUrl { get; set; }
+
         public int? IdUserAlta { get; set; }
         public int IdUserModif { get; set; }
         public int IdUserBaja { get; set; }

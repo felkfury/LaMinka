@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row rowfull px-4">
+    <div class="col-md-12 pt-5">
+      <mat-card class="pt-2">
+        <mat-card-title><h4>Mis Pedidos</h4></mat-card-title>
+        <mat-card-content>
+          <p *ngIf="!strings"><em>Loading...</em></p>
+          <table
+            class="table table-striped"
+            aria-labelledby="tableLabel"
+            *ngIf="strings"
+          >
+            <thead>
+              <tr></tr>
+              <tr>
+                <th>Pedido</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Repartidor</th>
+                <th>Estado</th>
+                <th>Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let string of strings">
+                <td>{{ string }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

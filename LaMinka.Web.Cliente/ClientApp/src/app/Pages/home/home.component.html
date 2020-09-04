@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row rowfull px-4">
+    <div class="col-md-12 pt-3"><h4>Home</h4></div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card>
+        <mat-card-title><h6>Mi Ultimo Pedido</h6></mat-card-title>
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item> 2 bolsones </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+            <mat-list-item> 2 docenas de huevo </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+            <mat-list-item> 2 paquete de yerba </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col-md-8 col-sm-12">
+      <mat-card class="tarjeta">
+        <mat-card-title><h6>Resumen</h6></mat-card-title>
+        <mat-card-content> </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="col-12">
+      <div class="card card-cascade" style="margin-top:20px">
+        <div class="card-header">
+          <h6 class="card-title">Realizar Pedidos</h6>
+        </div>
+
+        <div class="card-body">
+          <div class="row text-center">
+            <div class="col-md-6 col-sm-12">
+              <button
+                mat-raised-button
+                block
+                color="accent"
+                class="btn btn mb-4  boton"
+                [routerLink]="['/hacerPedido']"
+              >
+                Quiero hacer un Nuevo Pedido
+              </button>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <button
+                mat-raised-button
+                block
+                color="accent"
+                class="btn btn mb-4  boton"
+              >
+                Quiero repetir mi ultimo Pedido
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

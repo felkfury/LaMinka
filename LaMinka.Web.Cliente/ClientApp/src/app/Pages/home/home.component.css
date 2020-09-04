@@ -1,0 +1,14 @@
+.tarjeta {
+ 
+  height: 200px !important;
+  width: auto !important;
+}
+
+.margen {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.boton {
+    width:400px;
+    height:80px;
+}
