@@ -8,6 +8,7 @@ import {
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { AppComponent } from "../../app.component";
 import Swiper from "swiper/bundle";
+import { AuthService } from "../../Services/auth.service";
 
 @Component({
   selector: "app-pedidos",
@@ -19,7 +20,7 @@ export class PedidosComponent implements OnInit, AfterViewInit {
 
   constructor(
     public http: HttpClient,
-    @Inject("BASE_URL") public baseUrl: string
+    @Inject("BASE_URL") public baseUrl: string, public authService:AuthService
   ) {}
 
   ngOnInit() {}
@@ -27,7 +28,7 @@ export class PedidosComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {    
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
-      .append('Authorization', "Bearer " + sessionStorage.getItem("token"))
+      .append('Authorization', "Bearer " + this.authService.LoggedUser._token)
     
     this.http
       .get<string[]>(this.baseUrl + "pedidos", {

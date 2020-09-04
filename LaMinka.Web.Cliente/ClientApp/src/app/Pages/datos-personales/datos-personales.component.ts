@@ -48,20 +48,20 @@ export class DatosPersonalesComponent implements OnInit {
 
   onMapReady(map) {
     const geocoder = new google.maps.Geocoder();
-    this.formDatos.valueChanges.subscribe(data => {
-      geocoder.geocode({
-        address: `${this.formDatos.controls["calle"].value}
-        ${this.formDatos.controls['numero'].value} ,
-        ${this.formDatos.controls["localidad"].value}`
-      }, (results, status) => {
-        if (status === "OK") {
-          this.lat = results[0].geometry.location.lat;
-          this.lng = results[0].geometry.location.lat;
-        } else {
-          console.log("Geocode was not successful for the following reason: " + status)
-        }
-      });
-    });
+    //this.formDatos.valueChanges.subscribe(data => {
+    //  geocoder.geocode({
+    //    address: `${this.formDatos.controls["calle"].value}
+    //    ${this.formDatos.controls['numero'].value} ,
+    //    ${this.formDatos.controls["localidad"].value}`
+    //  }, (results, status) => {
+    //    if (status === "OK") {
+    //      this.lat = results[0].geometry.location.lat;
+    //      this.lng = results[0].geometry.location.lat;
+    //    } else {
+    //      console.log("Geocode was not successful for the following reason: " + status)
+    //    }
+    //  });
+    //});
   }
 
   private setCurrentPosition() {
@@ -79,11 +79,12 @@ export class DatosPersonalesComponent implements OnInit {
 
     const user = this.authService.LoggedUser;
     user._cliente.Nombre = this.formDatos.value.nombre
-    user._cliente.Apellido = this.formDatos.value.Apellido
+    user._cliente.Apellido = this.formDatos.value.apellido
     user._cliente.Email = this.formDatos.value.email
     user._cliente.IdUserModif = 1
-    //this.authService.LoggedUser._cliente.FechaModif = new Date(Date.now())
-    console.log(this.formDatos.value.email)
+    this.authService.LoggedUser._cliente.FechaModif = new Date(Date.now())
+    
+
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .append('Authorization', "Bearer " + user._token)
