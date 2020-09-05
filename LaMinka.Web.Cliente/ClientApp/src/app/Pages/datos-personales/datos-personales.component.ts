@@ -25,13 +25,11 @@ export class DatosPersonalesComponent implements OnInit {
   lng
 
   constructor(public http: HttpClient, @Inject('BASE_URL') public baseUrl: string, public formBuilder: FormBuilder, private router: Router, public appcomponent: AppComponent, public authService: AuthService) {
-    
   }
 
   ngOnInit() {
     this.formDatos = this.formBuilder.group(
       {
-        identificador: ["", Validators.required],
         nombre: ["", Validators.required],
         apellido: ["", Validators.required],
         mail: ["", Validators.required],
@@ -42,8 +40,11 @@ export class DatosPersonalesComponent implements OnInit {
         entreCalle: ["", Validators.required],
         segundaEntreCalle: ["", Validators.required],
         localidad: ["", Validators.required],
-      })
+      });
+
     this.setCurrentPosition();
+    console.log(this.authService.LoggedUser._cliente.email)
+    this.formDatos.patchValue({ nombre: this.authService.LoggedUser._cliente.nombre, apellido: this.authService.LoggedUser._cliente.apellido, mail: this.authService.LoggedUser._cliente.email });
   }
 
   onMapReady(map) {
@@ -76,14 +77,15 @@ export class DatosPersonalesComponent implements OnInit {
   onSave() {
     console.log(this.authService.LoggedUser)
 
-
     const user = this.authService.LoggedUser;
-    user._cliente.Nombre = this.formDatos.value.nombre
-    user._cliente.Apellido = this.formDatos.value.apellido
-    user._cliente.Email = this.formDatos.value.email
-    user._cliente.IdUserModif = 1
-    this.authService.LoggedUser._cliente.FechaModif = new Date(Date.now())
-    
+    user._cliente.nombre = this.formDatos.value.nombre
+    user._cliente.apellido = this.formDatos.value.apellido
+    user._cliente.email = this.formDatos.value.mail
+    user._cliente.idUserModif = 1
+    this.authService.LoggedUser._cliente.fechaModif = new Date(Date.now());
+    this.authService.LoggedUser = user;
+    this.authService.saveUserChanges();
+    this.formDatos.patchValue({ nombre: this.authService.LoggedUser._cliente.nombre, apellido: this.authService.LoggedUser._cliente.apellido, mail: this.authService.LoggedUser._cliente.email });
 
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
@@ -99,7 +101,5 @@ export class DatosPersonalesComponent implements OnInit {
         },
         (error) => console.error(error)
       );
-        
   }
-
 }

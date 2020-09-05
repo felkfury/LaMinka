@@ -1,17 +1,12 @@
 ﻿using LaMinka.Logica.Data;
 using LaMinka.Logica.Model;
-using LaMinka.Logica.Model.ViewModel;
 using LaMinka.Logica.Servicio;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-using Microsoft.Extensions.Configuration;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 
 namespace LaMinka
 {

@@ -2,18 +2,15 @@ import { Component, OnInit, AfterViewInit } from "@angular/core";
 import Swiper from "swiper/bundle";
 import { get } from 'scriptjs';
 
-
 @Component({
   selector: "app-realizar-pedidos",
   templateUrl: "./realizar-pedidos.component.html",
   styleUrls: ["./realizar-pedidos.component.css"],
 })
 export class RealizarPedidosComponent implements OnInit, AfterViewInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
-
-
   }
 
   ngAfterViewInit() {

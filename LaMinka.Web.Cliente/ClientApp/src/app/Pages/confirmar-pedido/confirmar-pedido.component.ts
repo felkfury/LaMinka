@@ -8,9 +8,9 @@ import { Component, OnInit } from "@angular/core";
 export class ConfirmarPedidoComponent implements OnInit {
   lat;
   lng;
-  constructor() {}
- 
-  ngOnInit() {}
+  constructor() { }
+
+  ngOnInit() { }
 
   onMapReady(map) {
     //codigo para cargar el mapa,

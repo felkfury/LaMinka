@@ -46,7 +46,7 @@
                                             @Html.DisplayFor(modelItem => item.Descripcion)
                                         </td>
                                         <td class="text-center">
-                                            
+
                                             <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-user-edit"></i></a>|
                                             <a onclick=Delete(`Productos/Delete/${@item.Id}`)><i class="fa fa-trash"></i></a>
                                         </td>

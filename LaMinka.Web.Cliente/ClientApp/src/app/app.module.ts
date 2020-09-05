@@ -38,7 +38,6 @@ import { ConfirmarPedidoComponent } from './Pages/confirmar-pedido/confirmar-ped
     DomicilioEntregaComponent,
     ConfirmarPedidoComponent,
 
-
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: "ng-cli-universal" }),
@@ -101,12 +100,12 @@ import { ConfirmarPedidoComponent } from './Pages/confirmar-pedido/confirmar-ped
     MatFormFieldModule,
     DemoMaterialModule,
     AgmCoreModule.forRoot({
-      apiKey:"",
-      
-      libraries:["places","drawing" ,"geometry",]
+      apiKey: "",
+
+      libraries: ["places", "drawing", "geometry",]
     })
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

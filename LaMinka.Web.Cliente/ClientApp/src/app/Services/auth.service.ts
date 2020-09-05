@@ -38,8 +38,7 @@ export class AuthService {
             this.LoggedUser = new User(user, token)
             console.log(token);
             console.log(this.LoggedUser);
-            sessionStorage.setItem("LoggedUser", JSON.stringify(this.LoggedUser));
-
+            this.saveUserChanges();
             this.subRes$.unsubscribe();
             resolve();
           },
@@ -59,6 +58,7 @@ export class AuthService {
       Email: user,
       Password: pass,
       Activo: true,
+      FechaAlta: new Date(Date.now())
     };
     console.log(usuarioRegistro);
 
@@ -83,8 +83,10 @@ export class AuthService {
     if (this.LoggedUser) return true;
     else return false;
   }
-
-  autoLogin() {
-    this.LoggedUser = JSON.parse(sessionStorage.getItem("LoggedUser"))
+  saveUserChanges() {
+    sessionStorage.setItem("LoggedUser", JSON.stringify(this.LoggedUser));
+  }
+   autoLogin() {
+    this.LoggedUser =  JSON.parse(sessionStorage.getItem("LoggedUser"))
   }
 }

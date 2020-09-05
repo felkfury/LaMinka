@@ -15,6 +15,4 @@ export class User {
   set token(token: string) {
     this._token = token;
   }
-
-
 }

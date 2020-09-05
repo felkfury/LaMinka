@@ -1,70 +1,67 @@
 <div class="container">
   <div id="bg">
-    <img
-      src="https://blog.aepla.es/wp-content/uploads/2019/12/consumo-frutas-verduras-aepla.jpeg"
-      alt=""
-    />
+    <img src="https://blog.aepla.es/wp-content/uploads/2019/12/consumo-frutas-verduras-aepla.jpeg"
+         alt="" />
   </div>
 
   <div class="container">
     <div class="row  px-4">
-      <div class="col-md-12  vertical-center" align="center"  >
+      <div class="col-md-12  vertical-center" align="center">
 
-      <div class="card card-cascade">
-        <div class="view view-cascade overlay">
-          <img class="card-img-top"
-               src="../../assets/la min ka la minka.jpg"
-               alt="Card image cap" />
-          <a>
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
+        <div class="card card-cascade">
+          <div class="view view-cascade overlay">
+            <img class="card-img-top"
+                 src="../../assets/la min ka la minka.jpg"
+                 alt="Card image cap" />
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
 
-        <div class="card-body card-body-cascade text-center">
-          <section class="login-form">
-            <form class="needs-validation"
-                  autocomplete="off"
-                  [formGroup]="formLogin"
-                  (ngSubmit)="LogIn()">
-              <mat-form-field class="form-full-width">
-                <mat-label>Usuario</mat-label>
-                <input matInput
-                       formControlName="usuario"
-                       placeholder="Ej. User123" />
-              </mat-form-field>
-              <mat-form-field class="form-full-width">
-                <mat-label>Contraseña</mat-label>
-                <input type="password" formControlName="password" matInput />
-              </mat-form-field>
+          <div class="card-body card-body-cascade text-center">
+            <section class="login-form">
+              <form class="needs-validation"
+                    autocomplete="off"
+                    [formGroup]="formLogin"
+                    (ngSubmit)="LogIn()">
+                <mat-form-field class="form-full-width">
+                  <mat-label>Usuario</mat-label>
+                  <input matInput
+                         formControlName="usuario"
+                         placeholder="Ej. User123" />
+                </mat-form-field>
+                <mat-form-field class="form-full-width">
+                  <mat-label>Contraseña</mat-label>
+                  <input type="password" formControlName="password" matInput />
+                </mat-form-field>
 
-              <div class="d-flex justify-content-between align-items-center">
-                <p style="margin-top: 15px">
-                  <a href="https://mdbootstrap.com/docs/jquery/admin/auth/reset-password/">Olvido su contraseña?</a>
-                </p>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" />
-                  <label class="form-check-label small text-uppercase card-link-secondary"
-                         for="new">Recordarme</label>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p style="margin-top: 15px">
+                    <a href="https://mdbootstrap.com/docs/jquery/admin/auth/reset-password/">Olvido su contraseña?</a>
+                  </p>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" />
+                    <label class="form-check-label small text-uppercase card-link-secondary"
+                           for="new">Recordarme</label>
+                  </div>
                 </div>
-              </div>
 
-              <div class="text-center">
-                <button mat-raised-button
-                        color="accent"
-                        type="submit"
-                        class="btn btn mb-4 btn-block">
-                  Ingresar
-                </button>
-                <p>
-                  No tiene cuenta? <a routerLink="/registro">Registrarse</a>
-                </p>
-              </div>
-            </form>
-          </section>
+                <div class="text-center">
+                  <button mat-raised-button
+                          color="accent"
+                          type="submit"
+                          class="btn btn mb-4 btn-block">
+                    Ingresar
+                  </button>
+                  <p>
+                    No tiene cuenta? <a routerLink="/registro">Registrarse</a>
+                  </p>
+                </div>
+              </form>
+            </section>
+          </div>
         </div>
       </div>
     </div>
-
-  </div>
   </div>
 </div>

@@ -13,12 +13,10 @@
             <div class="col-md-4 col-sm-12"></div>
 
             <div class="col-md-8 col-sm-12">
-              <agm-map
-                [zoom]="15"
-                [latitude]="lat"
-                [longitude]="lng"
-                (mapReady)="onMapReady($event)"
-              >
+              <agm-map [zoom]="15"
+                       [latitude]="lat"
+                       [longitude]="lng"
+                       (mapReady)="onMapReady($event)">
                 <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
               </agm-map>
             </div>

@@ -12,13 +12,13 @@ export interface Token {
   expirationDate: Date,
 }
 export interface cliente {
-  Id: number,
-  Nombre: string,
-  Apellido: string,
-  Email: string,
-  IdUserModif: number,
-  IdUserAlta: number,
-  FechaAlta: Date
-  FechaModif: Date,
-  Activo: boolean,
+  id: number,
+  nombre: string,
+  apellido: string,
+  email: string,
+  idUserModif: number,
+  idUserAlta: number,
+  fechaAlta: Date
+  fechaModif: Date,
+  activo: boolean,
 }

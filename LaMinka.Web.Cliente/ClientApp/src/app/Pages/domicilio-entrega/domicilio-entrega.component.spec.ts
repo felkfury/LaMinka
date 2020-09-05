@@ -8,9 +8,9 @@ describe('DomicilioEntregaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DomicilioEntregaComponent ]
+      declarations: [DomicilioEntregaComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

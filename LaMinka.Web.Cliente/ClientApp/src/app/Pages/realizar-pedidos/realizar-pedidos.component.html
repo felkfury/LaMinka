@@ -12,14 +12,10 @@
         <mat-card-content style="height: 25vh">
           <div class="container-fluid">
             <div class="row">
-              <div
-                class="col-md-4"
-                style="border-color: black; border: outset"
-              ></div>
-              <div
-                class="col-md-8"
-                style="border-color: black; border: outset"
-              ></div>
+              <div class="col-md-4"
+                   style="border-color: black; border: outset"></div>
+              <div class="col-md-8"
+                   style="border-color: black; border: outset"></div>
             </div>
           </div>
         </mat-card-content>
@@ -30,10 +26,8 @@
     <div class="col-md-8">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <mat-card
-            *ngFor="let item of [].constructor(10)"
-            class="p-4 swiper-slide"
-          >
+          <mat-card *ngFor="let item of [].constructor(10)"
+                    class="p-4 swiper-slide">
             <mat-card-title><h6>Adicional</h6></mat-card-title>
             <mat-card-content style="height: 20vh">
               <div class="container">
@@ -52,12 +46,8 @@
       <form>
         <div class="row">
           <mat-radio-group>
-            <mat-radio-button class="col-md-12" value="auto"
-              >Casa</mat-radio-button
-            >
-            <mat-radio-button class="col-md-12" value="always"
-              >Abuelo</mat-radio-button
-            >
+            <mat-radio-button class="col-md-12" value="auto">Casa</mat-radio-button>
+            <mat-radio-button class="col-md-12" value="always">Abuelo</mat-radio-button>
           </mat-radio-group>
 
           <div class="col-md-12">
@@ -73,13 +63,11 @@
       </form>
 
       <div class="">
-        <button
-          mat-raised-button
-          block
-          color="accent"
-          class="btn btn mb-4 btn-block"
-          routerLink="/confirmarPedido"
-        >
+        <button mat-raised-button
+                block
+                color="accent"
+                class="btn btn mb-4 btn-block"
+                routerLink="/confirmarPedido">
           Siguiente
         </button>
       </div>

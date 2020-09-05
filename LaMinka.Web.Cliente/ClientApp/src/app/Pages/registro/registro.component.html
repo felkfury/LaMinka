@@ -1,9 +1,7 @@
 <div class="container">
   <div id="bg">
-    <img
-      src="https://blog.aepla.es/wp-content/uploads/2019/12/consumo-frutas-verduras-aepla.jpeg"
-      alt=""
-    />
+    <img src="https://blog.aepla.es/wp-content/uploads/2019/12/consumo-frutas-verduras-aepla.jpeg"
+         alt="" />
   </div>
 
   <div class="container">
@@ -22,12 +20,10 @@
               <form class="needs-validation" [formGroup]="formRegister" (ngSubmit)="Register()">
                 <mat-form-field class="example-full-width">
                   <mat-label>Mail</mat-label>
-                  <input
-                    matInput
-                    type="email"
-                    formControlName="mail"
-                    placeholder="Ej. user@mail.com"
-                  />
+                  <input matInput
+                         type="email"
+                         formControlName="mail"
+                         placeholder="Ej. user@mail.com" />
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                   <mat-label>Contraseña</mat-label>
@@ -35,31 +31,24 @@
                 </mat-form-field>
                 <mat-form-field class="example-full-width">
                   <mat-label>Confirmar Contraseña</mat-label>
-                  <input
-                    type="password"
-                    formControlName="confirmPassword"
-                    matInput
-                  />
+                  <input type="password"
+                         formControlName="confirmPassword"
+                         matInput />
                 </mat-form-field>
 
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" />
-                    <label
-                      class="form-check-label small text-uppercase card-link-secondary"
-                      for="new"
-                      >Recordarme</label
-                    >
+                    <label class="form-check-label small text-uppercase card-link-secondary"
+                           for="new">Recordarme</label>
                   </div>
                 </div>
 
                 <div class="text-center">
-                  <button
-                    mat-raised-button
-                    color="accent"
-                    type="submit"
-                    class="btn btn mb-4 btn-block"
-                  >
+                  <button mat-raised-button
+                          color="accent"
+                          type="submit"
+                          class="btn btn mb-4 btn-block">
                     Registrarme
                   </button>
                   <p>Ya tiene una cuenta?<a routerLink="/login">Ingresar</a></p>

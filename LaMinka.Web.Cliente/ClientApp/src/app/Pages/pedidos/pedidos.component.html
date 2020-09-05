@@ -5,11 +5,9 @@
         <mat-card-title><h4>Mis Pedidos</h4></mat-card-title>
         <mat-card-content>
           <p *ngIf="!strings"><em>Loading...</em></p>
-          <table
-            class="table table-striped"
-            aria-labelledby="tableLabel"
-            *ngIf="strings"
-          >
+          <table class="table table-striped"
+                 aria-labelledby="tableLabel"
+                 *ngIf="strings">
             <thead>
               <tr></tr>
               <tr>

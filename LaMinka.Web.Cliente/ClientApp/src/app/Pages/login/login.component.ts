@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
- async LogIn() {
+  async LogIn() {
     await this.authService.LogIn(this.formLogin.value.usuario, this.formLogin.value.password)
     this.router.navigate(["/home"]);
   }

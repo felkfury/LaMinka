@@ -20,16 +20,16 @@ export class PedidosComponent implements OnInit, AfterViewInit {
 
   constructor(
     public http: HttpClient,
-    @Inject("BASE_URL") public baseUrl: string, public authService:AuthService
-  ) {}
+    @Inject("BASE_URL") public baseUrl: string, public authService: AuthService
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  ngAfterViewInit() {    
+  ngAfterViewInit() {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .append('Authorization', "Bearer " + this.authService.LoggedUser._token)
-    
+
     this.http
       .get<string[]>(this.baseUrl + "pedidos", {
         headers: headers,
@@ -51,6 +51,4 @@ export class PedidosComponent implements OnInit, AfterViewInit {
       },
     });
   }
-
-
 }

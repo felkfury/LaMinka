@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LaMinka.Logica.Data;
+using LaMinka.Logica.Model;
+using LaMinka.Logica.Model.ViewModel;
+using LaMinka.Logica.Servicio;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using LaMinka.Logica.Model;
-using LaMinka.Logica.Data;
-using LaMinka.Logica.Servicio;
-using LaMinka.Logica.Model.ViewModel;
 
 namespace LaMinka.Controllers
 {
@@ -21,19 +18,13 @@ namespace LaMinka.Controllers
         {
             _context = context;
             _servicioUsuario = servicioUsuario;
-
-
         }
 
-     
         // GET: Users
         public async Task<IActionResult> Index()
         {
             return View(await _context.User.ToListAsync());
         }
-
-       
-     
 
         // GET: Users/Create
         public IActionResult Create()
@@ -42,7 +33,7 @@ namespace LaMinka.Controllers
         }
 
         // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -74,21 +65,20 @@ namespace LaMinka.Controllers
         }
 
         // POST: Users/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(UserEditModel userEditModel)
         {
-           
-
             if (ModelState.IsValid)
             {
                 try
                 {
                     User entity = await _servicioUsuario.GetById(userEditModel.Id);
 
-                    if (entity == null) {
+                    if (entity == null)
+                    {
                         return View(userEditModel);
                     }
 
@@ -142,9 +132,7 @@ namespace LaMinka.Controllers
 
             await _context.SaveChangesAsync();
 
-            return View(user);
-
-
+            return Json(new { success = true, message = "Delete Successful" });
         }
 
         //// POST: Users/Delete/5
