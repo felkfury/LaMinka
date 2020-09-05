@@ -86,7 +86,7 @@ export class AuthService {
   saveUserChanges() {
     sessionStorage.setItem("LoggedUser", JSON.stringify(this.LoggedUser));
   }
-   autoLogin() {
-    this.LoggedUser =  JSON.parse(sessionStorage.getItem("LoggedUser"))
+  autoLogin() {
+    this.LoggedUser = JSON.parse(sessionStorage.getItem("LoggedUser"))
   }
 }

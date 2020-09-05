@@ -2,12 +2,10 @@
 
 /* Provide sufficient contrast against white background */
 
+html, body {
+  height: 100%;
+}
 
-
-
-
-
-html, body { height: 100%; }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -18,7 +16,7 @@ body {
   width: 100vw;
   position: relative;
   margin-left: -50vw;
-  height:auto;
+  height: auto;
   margin-top: -15px;
   left: 50%;
 }
