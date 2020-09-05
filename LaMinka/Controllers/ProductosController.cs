@@ -112,7 +112,7 @@ namespace LaMinka
                 if (HttpContext.Request.Form.Files.Count > 0)
                 {
                     var file = HttpContext.Request.Form.Files[0];
-                    producto.FotoUrl = SaveImage(file).Result;
+                    producto.FotoUrl = await SaveImage(file);
                 }
 
                 await _servicioProducto.Upsert(producto);
@@ -142,14 +142,26 @@ namespace LaMinka
             return View(producto);
         }
 
-        // POST: Productos/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
         {
-            await _servicioProducto.DeleteById(id);
+            var producto = await _servicioProducto.DeleteById(id);
+            if (producto == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
 
-            return RedirectToAction(nameof(Index));
+            return Json(new { success = true, message = "Delete Successful" });
         }
+
+        // POST: Productos/Delete/5
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    await _servicioProducto.DeleteById(id);
+
+        //    return RedirectToAction(nameof(Index));
+        //}
     }
 }

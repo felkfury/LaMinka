@@ -46,8 +46,9 @@
                                             @Html.DisplayFor(modelItem => item.Descripcion)
                                         </td>
                                         <td class="text-center">
-                                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                                            <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                                            
+                                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-user-edit"></i></a>|
+                                            <a onclick=Delete(`Productos/Delete/${@item.Id}`)><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 }
@@ -62,14 +63,6 @@
 
 @section Scripts{
 
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        $.noConflict();
-        $(document).ready(function () {
-
-            $("#table").DataTable();
-        });
-    </script>
+    <script src="~/js/Productos.Index.js"></script>
 
 }
